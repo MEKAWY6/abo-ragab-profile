@@ -5,81 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>أبو رجب - لقطع غيار الموتوسيكلات والدراجات</title>
     <link rel="stylesheet" href="style.css" />
-    <!-- أنماط إضافية مدمجة لضمان التنسيق السريع للأزرار الجديدة -->
-    <style>
-      .promo-badge {
-        background: #e74c3c;
-        color: white;
-        padding: 8px 18px;
-        border-radius: 30px;
-        font-weight: bold;
-        display: inline-block;
-        margin-bottom: 15px;
-        box-shadow: 0 4px 10px rgba(231, 76, 60, 0.3);
-      }
-      .quick-actions {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        justify-content: center;
-        margin: 25px 0;
-      }
-      .btn-call {
-        background: #f39c12;
-        color: #fff;
-        padding: 12px 20px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-      }
-      .btn-gps {
-        background: #2980b9;
-        color: white;
-        padding: 14px 25px;
-        border-radius: 10px;
-        text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-        margin-top: 15px;
-      }
-      .payment-section {
-        background: #1e1e1e;
-        padding: 40px 20px;
-        text-align: center;
-        border-radius: 15px;
-        margin: 30px auto;
-        max-width: 800px;
-      }
-      .payment-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: center;
-        margin-top: 20px;
-      }
-      .payment-card {
-        background: #2c3e50;
-        color: white;
-        padding: 15px 20px;
-        border-radius: 10px;
-        flex: 1 1 250px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      .btn-copy {
-        background: #27ae60;
-        color: white;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 6px;
-        cursor: pointer;
-        font-weight: bold;
-      }
-    </style>
   </head>
   <body>
     <header>
@@ -93,7 +18,7 @@
 
     <!-- قسم الترحيب وعروض الافتتاح -->
     <section class="hero">
-      <div class="hero-content">
+      <div class="hero-content hidden">
         <span class="promo-badge">🔥 عروض خاصة بمناسبة الافتتاح</span>
         <h2>لقطع غيار الموتوسيكلات والتروسيكلات والدراجات</h2>
         <p>
@@ -108,7 +33,7 @@
           <a href="tel:01037882835" class="btn-call">📞 01037882835</a>
         </div>
 
-        <!-- زر الواتساب الرئيسي باستدعاء الأيقونة الأصلية -->
+        <!-- زر الواتساب الرئيسي -->
         <a
           href="https://wa.me/201037898200?text=السلام%20عليكم،%20كنت%20بستفسر%20عن%20قطعة%20غيار"
           class="btn"
@@ -133,27 +58,27 @@
 
     <!-- قسم الخدمات الأساسية -->
     <section class="features">
-      <h2 class="section-title">خدماتنا وتخصصنا</h2>
+      <h2 class="section-title hidden">خدماتنا وتخصصنا</h2>
       <div class="features-grid">
-        <div class="feature-card">
+        <div class="feature-card hidden">
           <h3>🏍️ موتوسيكلات وتروسيكلات</h3>
           <p>توفير جميع قطع الغيار الأصلية والإكسسوارات بمختلف الموديلات.</p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card hidden">
           <h3>🚲 دراجات (عجل)</h3>
           <p>
             قطع غيار متكاملة وصيانة شاملة لجميع أنواع الدراجات العادية
             والرياضية.
           </p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card hidden">
           <h3>🛢️ تغيير زيت وتشحيم</h3>
           <p>
             زيوت معتمدة للمحركات مع خدمات التشحيم الدورية للحفاظ على أداء
             الموتوسيكل.
           </p>
         </div>
-        <div class="feature-card">
+        <div class="feature-card hidden">
           <h3>🔧 صيانة وتربيط</h3>
           <p>
             فحص شامل، تربيط عفشة ومساعدين، وصيانة ميكانيكا وكهرباء بدقة عالية.
@@ -163,7 +88,7 @@
     </section>
 
     <!-- قسم طرق الدفع (Instapay & Wallets) -->
-    <section class="payment-section">
+    <section class="payment-section hidden">
       <h2 style="color: white; margin-bottom: 10px">💳 طرق الدفع الإلكتروني</h2>
       <p style="color: #ccc; font-size: 0.95rem">
         ادفع بسهولة من مكانك عبر إنستا باي أو المحافظ الإلكترونية
@@ -171,20 +96,21 @@
 
       <div class="payment-grid">
         <!-- حساب Instapay -->
-        <div class="payment-card">
-          <div>
+        <!-- <div class="payment-card hidden"> -->
+          <!-- <div>
             <strong style="display: block; font-size: 0.9rem; color: #aaa"
               >Instapay Address</strong
-            >
-            <span>@instapay</span>
+            > -->
+            
+            <!-- <span>aboragab@instapay</span>
           </div>
-          <button class="btn-copy" onclick="copyText('@instapay', this)">
+          <button class="btn-copy" onclick="copyText('aboragab@instapay', this)">
             نسخ
-          </button>
-        </div>
+          </button> -->
+        <!-- </div> -->
 
-        <!-- فودافون كاش -->
-        <div class="payment-card">
+        <!-- 1 فودافون كاش -->
+        <div class="payment-card hidden">
           <div>
             <strong style="display: block; font-size: 0.9rem; color: #aaa"
               >فودافون كاش</strong
@@ -196,14 +122,20 @@
           </button>
         </div>
       </div>
+
     </section>
+
+
+
+    
 
     <!-- قسم الموقع والـ GPS -->
     <section
+      class="hidden"
       style="
         text-align: center;
         padding: 40px 20px;
-        background-color: var(--bg-alt, #f9f9f9);
+        background-color: var(--bg-alt, #080505);
       "
     >
       <h2 class="section-title" style="margin-bottom: 15px">
@@ -219,7 +151,6 @@
       >
         المريوطية - أول شارع الشيشيني - بجوار قهوة ابن البلد
       </p>
-      <!-- رابط الـ GPS (يمكنك وضع رابط خرائط جوجل الدقيق هنا) -->
       <a
         href="https://maps.app.goo.gl/QFevneQpCr6DTVgM6?g_st=ic"
         target="_blank"
@@ -266,23 +197,6 @@
       </p>
     </footer>
 
-    <script>
-      // تحديث السنة التلقائي في الفوتر
-      document.getElementById("currentYear").textContent =
-        new Date().getFullYear();
-
-      // دالة نسخ أرقام الدفع وحساب Instapay بسهولة
-      function copyText(text, btnElement) {
-        navigator.clipboard.writeText(text).then(() => {
-          const originalText = btnElement.textContent;
-          btnElement.textContent = "تم النسخ ✓";
-          btnElement.style.background = "#e67e22";
-          setTimeout(() => {
-            btnElement.textContent = originalText;
-            btnElement.style.background = "#27ae60";
-          }, 2000);
-        });
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
