@@ -1,0 +1,305 @@
+:root {
+  --bg-dark: #111524;
+  --card-bg: #1e263d;
+  --primary: #e74c3c;     /* تم التعديل إلى الأحمر ليتماشى مع هوية أبو رجب */
+  --accent: #f39c12;      /* لون برتقالي للأكشن السريع */
+  --whatsapp: #25d366;    /* لون واتساب الرسمي */
+  --success: #27ae60;
+  --text-main: #ffffff;
+  --text-muted: #a0aec0;
+  --border-color: #2c3656;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, sans-serif;
+}
+
+body {
+  background-color: var(--bg-dark);
+  color: var(--text-main);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+header {
+  background: var(--card-bg);
+  padding: 15px 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+header h1 {
+  color: var(--text-main);
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+header h1 span {
+  color: var(--primary);
+}
+
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: var(--text-main);
+}
+
+.hero p {
+  font-size: 1.15rem;
+  color: var(--text-muted);
+  max-width: 650px;
+  margin: 0 auto 25px auto;
+}
+
+/* --- الشارة الترويجية (Promo Badge) --- */
+.promo-badge {
+  background: var(--primary);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  display: inline-block;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 15px rgba(231, 76, 60, 0.4);
+}
+
+/* --- أزرار الإجراءات السريعة --- */
+.quick-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin: 25px 0;
+}
+
+.btn-call {
+  background: var(--accent);
+  color: #fff;
+  padding: 12px 22px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(243, 156, 18, 0.3);
+}
+
+.btn-call:hover {
+  background: #d68910;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(243, 156, 18, 0.5);
+}
+
+.btn {
+  display: inline-block;
+  padding: 15px 35px;
+  background: var(--whatsapp);
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+.btn:hover {
+  background: #20b858;
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+}
+
+.btn-gps {
+  background: #2980b9;
+  color: white;
+  padding: 14px 28px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(41, 128, 185, 0.3);
+}
+
+.btn-gps:hover {
+  background: #2471a3;
+  transform: translateY(-3px);
+}
+
+/* --- قسم الخدمات --- */
+.features {
+  padding: 80px 10%;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 50px;
+  color: var(--text-main);
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  background: var(--card-bg);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.feature-card h3 {
+  color: var(--primary);
+  margin-bottom: 15px;
+  font-size: 1.35rem;
+}
+
+.feature-card p {
+  color: var(--text-muted);
+  font-size: 1rem;
+}
+
+/* --- قسم طرق الدفع (Instapay & Wallets) --- */
+.payment-section {
+  background: #151a2e;
+  padding: 60px 10%;
+  text-align: center;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.payment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.payment-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  color: white;
+  padding: 18px 25px;
+  border-radius: 12px;
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: border-color 0.3s ease;
+}
+
+.payment-card:hover {
+  border-color: var(--accent);
+}
+
+.btn-copy {
+  background: var(--success);
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.btn-copy:hover {
+  background: #219150;
+}
+
+/* --- الفوتر --- */
+footer {
+  text-align: center;
+  padding: 35px 20px;
+  background: var(--card-bg);
+  color: var(--text-muted);
+  border-top: 1px solid var(--border-color);
+}
+
+/* --- إعدادات الأنيميشن للـ JavaScript --- */
+.hidden {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.8s ease-out;
+}
+
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- التوافق مع شاشات الموبايل --- */
+@media (max-width: 768px) {
+  .hero h2 {
+    font-size: 2rem;
+  }
+  
+  .features,
+  .payment-section {
+    padding: 50px 5%;
+  }
+
+  .quick-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-call,
+  .btn,
+  .btn-gps {
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .payment-card {
+    flex-direction: column;
+    gap: 15px;
+    text-align: center;
+  }
+
+  .btn-copy {
+    width: 100%;
+  }
+}
